@@ -18,11 +18,15 @@ Please refer to the following guide: https://aaboltaabol.notion.site/smol-ai
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+
 🙏 Acknowledgments
 
 This project was created by Arnab Chakravarty and Gabriella Garcia
+
 Supported by a grant from AIxDesign
+
 Built with p5.js and Ollama
+
 Special thanks to the open-source AI and creative coding communities
 
 📞 Contact
