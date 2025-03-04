@@ -11,10 +11,8 @@ This project provides a simple yet powerful interface between p5.js creative cod
 
 🚀 Getting Started
 
-Please refer to the following guides: 
-Installation:
-Personalizing AI via system prompt:
-Personalizing the UI:
+Please refer to the following guide: https://aaboltaabol.notion.site/smol-ai 
+
 
 📝 License
 
