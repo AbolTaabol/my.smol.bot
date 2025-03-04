@@ -138,7 +138,7 @@ let scrollOffset = 0;
 
 function setup() {
   // Create canvas and get its container
-  const canvas = createCanvas(800, 600);
+  const canvas = createCanvas(800, windowHeight);
   const canvasContainer = canvas.elt.parentElement;
   canvasContainer.style.position = 'relative';
 
@@ -150,9 +150,10 @@ function setup() {
   // Input container styling
   const inputContainer = createDiv('');
   inputContainer.parent(canvasContainer);
-  inputContainer.style('position', 'absolute');
+  inputContainer.style('position', 'fixed');
   inputContainer.style('bottom', '0');
   inputContainer.style('left', '0');
+  //inputContainer.style('transform', 'translateX(-50%)');
   inputContainer.style('width', '800px');
   inputContainer.style('height', `${STYLE_CONFIG.input.height}px`);
   inputContainer.style('background-color', STYLE_CONFIG.colors.inputBar.background);
@@ -166,6 +167,7 @@ function setup() {
   // Input field styling
   inputField = createInput('');
   inputField.parent(inputContainer);
+  inputField.attribute('placeholder', `Chat with ${ollamaClient.model}...`);
   inputField.style('flex', '1');
   inputField.style('height', `${STYLE_CONFIG.input.fieldHeight}px`);
   inputField.style('border', `1px solid ${STYLE_CONFIG.colors.inputBar.border}`);
@@ -284,7 +286,7 @@ function handleSend() {
       return height + (lines.length * STYLE_CONFIG.layout.lineHeight + 55);
     }, 0);
 
-    scrollOffset = -Math.max(0, totalHeight - (height - STYLE_CONFIG.input.height - 40));
+    scrollOffset = -Math.max(0, totalHeight - (windowHeight - STYLE_CONFIG.input.height - 40));
   }
 }
 
@@ -301,4 +303,9 @@ function mouseWheel(event) {
   scrollOffset = constrain(scrollOffset, maxScroll, 0);
 
   return false;
+}
+
+// Add this function to handle window resizing
+function windowResized() {
+  resizeCanvas(800, windowHeight);
 }
