@@ -31,4 +31,4 @@ Special thanks to the open-source AI and creative coding communities
 
 📞 Contact
 
-For questions or suggestions, please open an issue in this repository.
+For questions or suggestions, please open an issue in this repository or drop an email at arnab@nyu.edu.
